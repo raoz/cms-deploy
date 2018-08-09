@@ -1,0 +1,7 @@
+   82  apt-cache search cgroup
+   86  sudo apt-get install libcap-dev
+  123  sudo apt install links
+  162  sudo apt install nginx
+  223  sudo apt install netcat
+  357  sudo apt install certbot
+  932  history | grep apt > apthist

@@ -1,0 +1,14 @@
+
+[Unit]
+Description=CMS Contest Web Server Service
+After=cmslog.service
+
+[Service]
+Type=simple
+User=demon
+WorkingDirectory=/home/demon/cms_venv/bin
+ExecStart=/home/demon/cms_venv/bin/cmsContestWebServer -c ALL
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

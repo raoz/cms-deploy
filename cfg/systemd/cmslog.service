@@ -1,0 +1,14 @@
+[Unit]
+Description=CMS Log Service
+After=network.target
+
+[Service]
+Type=simple
+User=demon
+WorkingDirectory=/home/demon/cms_venv/bin
+ExecStart=/home/demon/cms_venv/bin/cmsLogService
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+WantedBy=cmsresource.service

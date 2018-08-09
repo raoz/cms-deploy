@@ -1,0 +1,13 @@
+[Unit]
+Description=CMS Worker Service
+After=cmslog.service
+
+[Service]
+Type=simple
+User=demon
+WorkingDirectory=/home/demon/cms_venv/bin
+ExecStart=/home/demon/cms_venv/bin/cmsWorker
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+
+[Unit]
+Description=CMS Admin Web Server Service
+After=cmslog.service
+
+[Service]
+Type=simple
+User=demon
+WorkingDirectory=/home/demon/cms_venv/bin
+ExecStart=/home/demon/cms_venv/bin/cmsAdminWebServer
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

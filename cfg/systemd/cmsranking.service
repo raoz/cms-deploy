@@ -1,0 +1,13 @@
+[Unit]
+Description=CMS Ranking Web Server Service
+After=cmslog.service
+
+[Service]
+Type=simple
+User=demon
+WorkingDirectory=/home/demon/cms_venv/bin
+ExecStart=/home/demon/cms_venv/bin/cmsRankingWebServer
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

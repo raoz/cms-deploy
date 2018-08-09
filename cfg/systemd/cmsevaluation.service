@@ -1,0 +1,13 @@
+[Unit]
+Description=CMS Evaluation Service
+After=cmslog.service
+
+[Service]
+Type=simple
+User=demon
+WorkingDirectory=/home/demon/cms_venv/bin
+ExecStart=/home/demon/cms_venv/bin/cmsEvaluationService
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
